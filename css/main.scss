@@ -1,0 +1,23 @@
+@import "sass/helpers/variables";
+@import "sass/helpers/mixins";
+
+@import "sass/base/typography";
+@import "sass/base/base";
+@import "sass/base/reset";
+
+@import "sass/objects/form";
+@import "sass/objects/buttons";
+@import "sass/objects/slider";
+
+@import "sass/components/main";
+@import "sass/components/auctions_section";
+@import "sass/components/auctions";
+
+@import "sass/layout/header";
+@import "sass/layout/user";
+@import "sass/layout/lang";
+@import "sass/layout/navbar";
+@import "sass/layout/footer";
+
+@import "sass/pages/auth";
+@import "sass/pages/home";

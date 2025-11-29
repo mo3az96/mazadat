@@ -1,0 +1,93 @@
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 22px;
+  width: fit-content;
+  height: 50px;
+  width: 100%;
+  border-radius: 14px;
+  background-color: $primaryColor;
+  font-size: 16px;
+  font-weight: 500;
+  @include focus(#fff);
+  &:hover {
+    background-color: $secondaryColor;
+    color: #fff;
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.alternative-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 22px;
+  width: fit-content;
+  height: 50px;
+  width: 100%;
+  border-radius: 14px;
+  background-color: #2d883e;
+  font-size: 16px;
+  font-weight: 500;
+  @include focus(#fff);
+  &:hover {
+    background-color: darken(#2d883e, 15%);
+    color: #fff;
+  }
+}
+
+.resend-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-top: 8px;
+  margin-inline-start: auto;
+  @include focus($primaryColor);
+  &:hover {
+    color: $secondaryColor;
+    text-decoration: underline;
+  }
+}
+
+.default-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+  width: fit-content;
+  height: 42px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid $primaryColor;
+  background-color: $primaryColor;
+  @include focus(#fff);
+  .icon {
+    width: 24px;
+    aspect-ratio: 1;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &.secondary-btn {
+    background-color: transparent;
+    @include focus($primaryColor);
+  }
+  &:hover {
+    background-color: $secondaryColor;
+    border-color: $secondaryColor;
+    color: #fff;
+  }
+}

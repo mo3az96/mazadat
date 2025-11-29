@@ -1,0 +1,79 @@
+.custom-slider {
+  position: relative;
+
+  .swiper-btn {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    width: 48px;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #292d32;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &::after {
+      display: none;
+    }
+    &.swiper-btn-prev {
+      right: 0;
+      left: auto;
+    }
+    &.swiper-btn-next {
+      left: 0;
+      right: auto;
+    }
+    &:hover {
+      background-color: $primaryColor;
+      color: #fff;
+    }
+    @include sm {
+      display: none;
+    }
+  }
+  .swiper-pagination {
+    position: relative;
+    inset: unset;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+    @include xs {
+      margin-top: 25px;
+    }
+    .swiper-pagination-bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 5px;
+      background-color: rgb(0, 0, 0);
+      opacity: 0.5;
+      margin: 0;
+      transition: all 0.3s ease-in-out;
+      &.swiper-pagination-bullet-active {
+        background-color: $primaryColor;
+        opacity: 1;
+      }
+    }
+  }
+}
+.main-slider {
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    display: none;
+    @include sm {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.main-section {
+  @include xs {
+    .container {
+      padding: 0;
+    }
+  }
+}
+.main-slider {
+  padding: 0 64px;
+  @include sm {
+    padding: 0;
+  }
+}
+
+.slider-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  aspect-ratio: 1140/285;
+  overflow: hidden;
+}

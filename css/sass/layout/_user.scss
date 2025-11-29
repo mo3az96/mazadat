@@ -1,0 +1,36 @@
+.header_user-content {
+  position: relative;
+}
+.header_user-icon {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #e7edf2;
+  color: $primaryColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 22px;
+  cursor: pointer;
+  @include focus($primaryColor);
+  span {
+    position: absolute;
+    bottom: -1.5px;
+    inset-inline-end: -5px;
+    width: 18px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: #fff;
+    color: $secondaryColor;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+  &:hover {
+    background-color: $secondaryColor;
+    color: #fff;
+  }
+}

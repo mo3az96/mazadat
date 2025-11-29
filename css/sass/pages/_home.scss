@@ -1,0 +1,17 @@
+.main-section {
+  margin: 58px 0 96px;
+  overflow: hidden;
+  @include sm {
+    margin: 20px 0 60px;
+  }
+  @include xs {
+    margin-top: 0;
+  }
+}
+
+.auctions-section {
+  margin: 96px 0;
+  @include sm {
+    margin: 60px 0;
+  }
+}

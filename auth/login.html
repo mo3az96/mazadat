@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
+    />
+    <title>Mazadat | Login</title>
+    <link rel="shortcut icon" type="img/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="auth-body">
+        <a href="../index.html" class="auth-logo">
+          <img src="../images/logo.png" alt="logo" class="img-contain" />
+        </a>
+        <div class="auth-form">
+          <div class="auth-head">
+            <h1 class="auth-title">تسجيل الدخول عبر الهاتف</h1>
+            <p class="auth-desc">
+              لا امتلك حساب? <a href="./register.html"> انشاء حساب جديد </a>
+            </p>
+          </div>
+          <form action="../index.html">
+            <div class="form-grid">
+              <div class="form-group full-w">
+                <input
+                  type="text"
+                  placeholder="رقم الهويه"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group full-w">
+                <div class="password-content">
+                  <input
+                    type="password"
+                    placeholder="كلمة السر"
+                    class="form-control"
+                  />
+                  <span class="password-toggle">
+                    <img
+                      src="../images/icons/eye.svg"
+                      alt="password"
+                      class="svg"
+                    />
+                  </span>
+                </div>
+                <a href="password_forget.html" class="password-link">
+                  نسيت كلمة المرور ؟
+                </a>
+              </div>
+            </div>
+            <button type="submit" class="submit-btn">تسجيل الدخول</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/svg.js"></script>
+    <script>
+      $(".password-toggle").on("click", function (e) {
+        e.preventDefault();
+        const input = $(this)
+          .closest(".password-content")
+          .find("input.form-control");
+        const isPassword = input.attr("type") === "password";
+        input.attr("type", isPassword ? "text" : "password");
+        $(this).toggleClass("active", isPassword);
+      });
+    </script>
+  </body>
+</html>

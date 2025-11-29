@@ -1,0 +1,86 @@
+.main-header {
+  background-color: #fff;
+  box-shadow: 0px 1px 3px 1px #00000026, 0px 1px 3px 0px #00000026;
+  .container {
+    @include xl {
+      max-width: 1356px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 32px;
+  padding: 20px 0;
+  @include xl {
+    padding-inline-start: 36px;
+  }
+  @include md {
+    gap: 16px;
+  }
+  @include xs {
+    padding: 10px 0;
+  }
+}
+
+.logo {
+  width: 57px;
+  aspect-ratio: 57/46;
+  display: flex;
+  flex-shrink: 0;
+  @include xs {
+    width: 47px;
+  }
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-inline-start: auto;
+}
+
+.header-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  padding: 0;
+  font-size: 22px;
+  @include focus(#333333);
+  &:hover {
+    color: $primaryColor;
+  }
+  // &.header_notification-icon {
+  //   @include xs {
+  //     display: none;
+  //   }
+  // }
+  &.menu-btn {
+    display: none;
+    @include md {
+      display: flex;
+    }
+  }
+  &.close-btn {
+    font-size: 16px;
+    opacity: 0.5;
+  }
+}
+
+.header-btns {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  @include xs {
+    display: none;
+  }
+}
+
+.header-btn {
+  white-space: nowrap;
+}

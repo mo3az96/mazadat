@@ -1,0 +1,131 @@
+.auth-body {
+  position: relative;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  --padding: 30px;
+  --logo: 75px;
+  padding: var(--padding) 0 calc(var(--padding) + 13px + var(--logo));
+  @include xl {
+    --padding: 50px;
+    --logo: 86px;
+  }
+}
+
+.auth-logo {
+  height: 75px;
+  aspect-ratio: 107/86;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  @include xl {
+    height: 86px;
+  }
+}
+
+.auth-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  max-width: 668px;
+  margin: auto;
+}
+
+.auth-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2px;
+  color: #333;
+  margin-bottom: 40px;
+  @include xl {
+    margin-bottom: 80px;
+  }
+}
+
+.auth-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+.auth-desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  span {
+    display: block;
+    color: $primaryColor;
+  }
+  a {
+    text-decoration: underline;
+    @include focus(#333);
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+}
+.password-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  margin-top: 8px;
+  margin-inline-start: auto;
+  @include focus($primaryColor);
+  &:hover {
+    color: $secondaryColor;
+    text-decoration: underline;
+  }
+}
+
+.register-alternative {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 32px;
+  margin: 48px 0;
+  @include sm {
+    margin: 34px 0;
+    gap: 16px;
+  }
+  .alternative-or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    gap: 20px;
+    span {
+      background-color: #fff;
+      height: 22px;
+      width: 32px;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $textColor;
+    }
+    &::after,
+    &::before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      flex: 1;
+      background-color: #e0e0e0;
+    }
+  }
+}
