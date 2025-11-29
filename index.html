@@ -75,9 +75,32 @@
             <button type="button" class="header-icon menu-btn">
               <img src="images/icons/menu.svg" alt="bars" class="svg" />
             </button>
-            <a href="search.html" class="header-icon header_search-icon">
-              <img src="images/icons/search.svg" alt="search" class="svg" />
-            </a>
+            <div class="header_search-content">
+              <button type="button" class="header-icon header_search-icon">
+                <img src="images/icons/search.svg" alt="search" class="svg" />
+                <img
+                  src="images/icons/times.svg"
+                  alt="search"
+                  class="svg times"
+                />
+              </button>
+              <div class="float_search-content">
+                <form class="float_search-form">
+                  <input
+                    type="search"
+                    class="float_search-input"
+                    placeholder="ابحث عن مزاد"
+                  />
+                  <button type="submit" class="float_search-btn">
+                    <img
+                      src="images/icons/search.svg"
+                      alt="search"
+                      class="svg"
+                    />
+                  </button>
+                </form>
+              </div>
+            </div>
             <a href="#!" class="header-icon header_notification-icon">
               <img
                 src="images/icons/notification.svg"
@@ -92,6 +115,60 @@
                   <img src="images/icons/bars.svg" alt="bars" class="svg" />
                 </span>
               </button>
+              <div class="header_user-dropdown">
+                <div class="header_user-info">
+                  <div class="header_user-avatar">
+                    <img
+                      loading="lazy"
+                      src="images/users/1.jpg"
+                      alt="avatar"
+                      class="img-cover"
+                    />
+                  </div>
+                  <p class="header_user-text">
+                    Hala Ahmed
+                    <span> Hala 124@gmail.com </span>
+                  </p>
+                </div>
+                <ul class="header_user-list">
+                  <li>
+                    <a href="#!">
+                      <span class="icon">
+                        <img
+                          src="images/icons/partener_account.svg"
+                          alt="account"
+                          class="svg"
+                        />
+                      </span>
+                      حساب الشريك
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!">
+                      <span class="icon">
+                        <img
+                          src="images/icons/wallet.svg"
+                          alt="wallet"
+                          class="svg"
+                        />
+                      </span>
+                      المحفظه
+                    </a>
+                  </li>
+                  <li>
+                    <a href="index_guest.html" class="logout-link">
+                      <span class="icon">
+                        <img
+                          src="images/icons/logout.svg"
+                          alt="logout"
+                          class="svg"
+                        />
+                      </span>
+                      تسجيل الخروج
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="header-btns">
               <a href="#!" class="header-btn default-btn"> الانضمام كشريك </a>

@@ -13,6 +13,11 @@ $(document).ready(function () {
     $("body").removeClass("overflow");
     $(".overlay").fadeOut();
   });
+  /************************************ Search ************************************/
+  $(".header_search-icon").click(function () {
+    $(".float_search-content").slideToggle();
+    $(this).toggleClass("active");
+  });
   /************************************ Main Slider ************************************/
   var mainSwiper = new Swiper(".main-slider .swiper", {
     a11y: {

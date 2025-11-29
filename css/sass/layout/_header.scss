@@ -1,6 +1,7 @@
 .main-header {
   background-color: #fff;
   box-shadow: 0px 1px 3px 1px #00000026, 0px 1px 3px 0px #00000026;
+  position: relative;
   .container {
     @include xl {
       max-width: 1356px;
@@ -55,15 +56,18 @@
   &:hover {
     color: $primaryColor;
   }
-  // &.header_notification-icon {
-  //   @include xs {
-  //     display: none;
-  //   }
-  // }
+  &.header_notification-icon {
+    @include xs {
+      order: 2;
+    }
+  }
   &.menu-btn {
     display: none;
     @include md {
       display: flex;
+    }
+    @include xs {
+      order: 4;
     }
   }
   &.close-btn {
