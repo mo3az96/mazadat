@@ -89,5 +89,8 @@
     background-color: $secondaryColor;
     border-color: $secondaryColor;
     color: #fff;
+    &.secondary-btn {
+      color: #fff;
+    }
   }
 }

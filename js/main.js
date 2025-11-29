@@ -199,4 +199,11 @@ $(document).ready(function () {
       label.text(label.data("plceholder"));
     }
   });
+
+  /************************************ Submit Form ************************************/
+  $(document).on("change", "input[name='product_types']", function () {
+    const modalId = "#" + $(this).attr("data-modal-id");
+    const button = $("#addProductModal .submit-btn");
+    button.attr("data-bs-target", modalId);
+  });
 });

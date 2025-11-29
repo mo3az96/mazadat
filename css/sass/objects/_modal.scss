@@ -45,8 +45,10 @@
     padding: 16px;
     border: none;
     display: flex;
+    gap: 8px;
     align-items: start;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
   .modal-title {
     font-size: 20px;

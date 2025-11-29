@@ -66,13 +66,13 @@ input {
 }
 
 select {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" fill="%23343434"><path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z" /></svg>');
+  background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.9999 15.4006C10.3582 15.4006 9.71656 15.1531 9.23073 14.6672L3.25406 8.69057C2.98823 8.42474 2.98823 7.98474 3.25406 7.71891C3.5199 7.45307 3.9599 7.45307 4.22573 7.71891L10.2024 13.6956C10.6424 14.1356 11.3574 14.1356 11.7974 13.6956L17.7741 7.71891C18.0399 7.45307 18.4799 7.45307 18.7457 7.71891C19.0116 7.98474 19.0116 8.42474 18.7457 8.69057L12.7691 14.6672C12.2832 15.1531 11.6416 15.4006 10.9999 15.4006Z" fill="%23B2B2B2"/></svg>');
   background-repeat: no-repeat;
-  background-size: 12px;
+  background-size: 22px;
   appearance: none;
-  background-position: left 25px top 50%;
+  background-position: left 16px top 50%;
   @include ltr {
-    background-position: right 25px top 50%;
+    background-position: right 16px top 50%;
   }
 }
 .fa-linkedin {

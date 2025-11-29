@@ -900,9 +900,6 @@
         </div>
       </div>
     </div>
-    <!-- End Join Modal -->
-
-    <!-- Start Success Modal -->
     <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
@@ -923,7 +920,850 @@
         </div>
       </div>
     </div>
-    <!-- End Success Modal -->
+    <!-- End Join Modal -->
+
+    <!-- Start Add Product Modal -->
+    <div
+      class="modal fade"
+      id="addProductModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اضافة منتج</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+            <div class="steps-progress">
+              <span class="step active"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="product_type-form">
+              <div class="fieldset-grid">
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">نوع المنتج</h3>
+                  <div class="types-radios">
+                    <div class="type-radio">
+                      <input
+                        type="radio"
+                        name="product_types"
+                        data-modal-id="addRealestateProductModal"
+                        id="typeRealestate"
+                        checked
+                      />
+                      <label for="typeRealestate" class="type-radio-label">
+                        <span class="icon">
+                          <img
+                            src="images/icons/tabs/1.svg"
+                            alt="type"
+                            class="svg"
+                          />
+                        </span>
+                        <span class="text"> عقار </span>
+                        <span class="mark"></span>
+                      </label>
+                    </div>
+                    <div class="type-radio">
+                      <input
+                        type="radio"
+                        name="product_types"
+                        data-modal-id="addVehiclesProductModal"
+                        id="typeVehicles"
+                      />
+                      <label for="typeVehicles" class="type-radio-label">
+                        <span class="icon">
+                          <img
+                            src="images/icons/tabs/2.svg"
+                            alt="type"
+                            class="svg"
+                          />
+                        </span>
+                        <span class="text"> مركبه </span>
+                        <span class="mark"></span>
+                      </label>
+                    </div>
+                    <div class="type-radio">
+                      <input
+                        type="radio"
+                        name="product_types"
+                        data-modal-id="addMovablesProductModal"
+                        id="typeMovables"
+                      />
+                      <label for="typeMovables" class="type-radio-label">
+                        <span class="icon">
+                          <img
+                            src="images/icons/tabs/3.svg"
+                            alt="type"
+                            class="svg"
+                          />
+                        </span>
+                        <span class="text"> منقولات </span>
+                        <span class="mark"></span>
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button
+                type="button"
+                data-bs-target="#addRealestateProductModal"
+                data-bs-toggle="modal"
+                class="submit-btn"
+              >
+                التالي
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Add Product Modal -->
+
+    <!-- Start Add Realestate Product Modal -->
+    <div
+      class="modal fade"
+      id="addRealestateProductModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اضافة منتج عقار</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+            <div class="steps-progress">
+              <span class="step completed"></span>
+              <span class="step active"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="product_type-form">
+              <div class="fieldset-grid">
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">معلومات العقار</h3>
+                  <div class="form-grid">
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>الدوله</option>
+                        <option value="1">دوله</option>
+                        <option value="2">دوله</option>
+                        <option value="3">دوله</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="اسم الحي"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="اسم الشارع"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="نوع العقار"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="نوع استخدام العقار"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="المساحه"
+                      />
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button
+                type="button"
+                data-bs-target="#addRealestateProductStep3Modal"
+                data-bs-toggle="modal"
+                class="submit-btn"
+              >
+                التالي
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="addRealestateProductStep3Modal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اضافة منتج عقار</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+            <div class="steps-progress">
+              <span class="step completed"></span>
+              <span class="step completed"></span>
+              <span class="step active"></span>
+              <span class="step"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="product_type-form">
+              <div class="fieldset-grid">
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">معلومات العقار</h3>
+                  <div class="form-grid">
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" accept="image/*" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/camera.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل صوره رئسيه">
+                          تحميل صوره رئسيه
+                        </span>
+                      </div>
+                    </div>
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/upload.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل رخصة البناء">
+                          تحميل رخصة البناء
+                        </span>
+                      </div>
+                    </div>
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/upload.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل تفويض المؤسسة">
+                          تحميل تفويض المؤسسة
+                        </span>
+                      </div>
+                    </div>
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/upload.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل الرفع المساحي">
+                          تحميل الرفع المساحي
+                        </span>
+                      </div>
+                    </div>
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/upload.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل الرفع المساحي">
+                          تحميل الرفع المساحي
+                        </span>
+                      </div>
+                    </div>
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" accept="image/*" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/camera.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="اضافة صور"> اضافة صور </span>
+                      </div>
+                    </div>
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" accept="image/*" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/camera.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="اضافة البرشور">
+                          اضافة البرشور
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group full-w">
+                      <textarea
+                        class="form-control"
+                        placeholder="وصف المشروع"
+                      ></textarea>
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="رقم الصك"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="حدود العقار"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="اطوال العقار"
+                      />
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button
+                type="button"
+                data-bs-target="#addRealestateProductStep4Modal"
+                data-bs-toggle="modal"
+                class="submit-btn"
+              >
+                التالي
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="addRealestateProductStep4Modal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اضافة منتج عقار</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+            <div class="steps-progress">
+              <span class="step completed"></span>
+              <span class="step completed"></span>
+              <span class="step completed"></span>
+              <span class="step active"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="product_type-form">
+              <div class="fieldset-grid">
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">معلومات المزاد</h3>
+                  <div class="form-grid">
+                    <div class="form-group full-w">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="السعر الافتتاحي"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="قيمة المزايدة"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="سعر المتر"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="اقل سعر بيع للمزاد"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>نوع المزايدة</option>
+                        <option value="1">نوع</option>
+                        <option value="2">نوع</option>
+                        <option value="3">نوع</option>
+                      </select>
+                      <span class="form-hint">
+                        نسبة المنصه هي 22% من السعر الكلي
+                      </span>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button
+                type="button"
+                data-bs-target="#successModal"
+                data-bs-toggle="modal"
+                class="submit-btn"
+              >
+                التالي
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Add Realestate Product Modal -->
+
+    <!-- Start Add Vehicles Product Modal -->
+    <div
+      class="modal fade"
+      id="addVehiclesProductModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اضافة منتج مركبه</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+            <div class="steps-progress">
+              <span class="step completed"></span>
+              <span class="step active"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="product_type-form">
+              <div class="fieldset-grid">
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">معلومات المركبه</h3>
+                  <div class="form-grid">
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>النوع</option>
+                        <option value="1">النوع</option>
+                        <option value="2">النوع</option>
+                        <option value="3">النوع</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>الماركه</option>
+                        <option value="1">الماركه</option>
+                        <option value="2">الماركه</option>
+                        <option value="3">الماركه</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>الموديل</option>
+                        <option value="1">الموديل</option>
+                        <option value="2">الموديل</option>
+                        <option value="3">الموديل</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>سنة الصنع</option>
+                        <option value="1">سنة الصنع</option>
+                        <option value="2">سنة الصنع</option>
+                        <option value="3">سنة الصنع</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="الكيلوميترات"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>نوع الوقود</option>
+                        <option value="1">نوع الوقود</option>
+                        <option value="2">نوع الوقود</option>
+                        <option value="3">نوع الوقود</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="رقم اللوحه"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="رقم الهيكل"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="رقم التسلسلي"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="حالة الايرباج"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="اللون الخارجي"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="معلومات الرخصه"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>نوع الاستماره</option>
+                        <option value="1">نوع الاستماره</option>
+                        <option value="2">نوع الاستماره</option>
+                        <option value="3">نوع الاستماره</option>
+                      </select>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button
+                type="button"
+                data-bs-target="#addVehiclesProductStep3Modal"
+                data-bs-toggle="modal"
+                class="submit-btn"
+              >
+                التالي
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="addVehiclesProductStep3Modal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اضافة منتج مركبه</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+            <div class="steps-progress">
+              <span class="step completed"></span>
+              <span class="step completed"></span>
+              <span class="step active"></span>
+              <span class="step"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="product_type-form">
+              <div class="fieldset-grid">
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">معلومات المركبه</h3>
+                  <div class="form-grid">
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" accept="image/*" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/camera.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل صور المركبه">
+                          تحميل صور المركبه
+                        </span>
+                      </div>
+                    </div>
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/upload.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل ملف الفحص">
+                          تحميل ملف الفحص
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>الفحص الدوري</option>
+                        <option value="1">نعم</option>
+                        <option value="2">لا</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>
+                          هل تعرضت السياره لغرق كلي او جزئي
+                        </option>
+                        <option value="1">نعم</option>
+                        <option value="2">لا</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>
+                          هل تعرضت السياره لحرق كلي او جزئي
+                        </option>
+                        <option value="1">نعم</option>
+                        <option value="2">لا</option>
+                      </select>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button
+                type="button"
+                data-bs-target="#addVehiclesProductStep4Modal"
+                data-bs-toggle="modal"
+                class="submit-btn"
+              >
+                التالي
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="addVehiclesProductStep4Modal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اضافة منتج مركبه</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+            <div class="steps-progress">
+              <span class="step completed"></span>
+              <span class="step completed"></span>
+              <span class="step completed"></span>
+              <span class="step active"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="product_type-form">
+              <div class="fieldset-grid">
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">معلومات المزاد</h3>
+                  <div class="form-grid">
+                    <div class="form-group full-w">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="قيمة المزايدة"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="اقل سعر بيع للمزاد"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>نوع المزايدة</option>
+                        <option value="1">نوع</option>
+                        <option value="2">نوع</option>
+                        <option value="3">نوع</option>
+                      </select>
+                      <span class="form-hint">
+                        نسبة المنصه هي 22% من السعر الكلي
+                      </span>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button
+                type="button"
+                data-bs-target="#successModal"
+                data-bs-toggle="modal"
+                class="submit-btn"
+              >
+                التالي
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Add Vehicles Product Modal -->
+
+    <!-- Start Add Movables Product Modal -->
+    <div
+      class="modal fade"
+      id="addMovablesProductModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اضافة منتج منقولات</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+            <div class="steps-progress">
+              <span class="step completed"></span>
+              <span class="step active"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <form class="product_type-form">
+              <div class="fieldset-grid">
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">معلومات المنقولات</h3>
+                  <div class="form-grid">
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" accept="image/*" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/camera.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل صوره رئسيه">
+                          تحميل صوره رئسيه
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>
+                          التصنيف الفرعي للمنتج
+                        </option>
+                        <option value="1">التصنيف الفرعي للمنتج</option>
+                        <option value="2">التصنيف الفرعي للمنتج</option>
+                        <option value="3">التصنيف الفرعي للمنتج</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>الحاله</option>
+                        <option value="1">الحاله</option>
+                        <option value="2">الحاله</option>
+                        <option value="3">الحاله</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <select class="form-control">
+                        <option value="" hidden selected>سنة الصنع</option>
+                        <option value="1">سنة الصنع</option>
+                        <option value="2">سنة الصنع</option>
+                        <option value="3">سنة الصنع</option>
+                      </select>
+                    </div>
+                    <div class="form-group full-w">
+                      <textarea
+                        class="form-control"
+                        placeholder="الوصف"
+                      ></textarea>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button
+                type="button"
+                data-bs-target="#successModal"
+                data-bs-toggle="modal"
+                class="submit-btn"
+              >
+                التالي
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Add Movables Product Modal -->
+
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

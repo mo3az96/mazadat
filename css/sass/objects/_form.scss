@@ -314,3 +314,11 @@ form {
     margin: 0 auto;
   }
 }
+
+.form-hint {
+  font-size: 14px;
+  line-height: 1.334;
+  color: $primaryColor;
+  margin-top: 8px;
+  display: flex;
+}
