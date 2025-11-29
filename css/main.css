@@ -86,7 +86,7 @@ body {
   font-family: AR;
   font-weight: 400;
   color: #333333;
-  background-color: #fff;
+  background-color: #fcfcfc;
 }
 @supports (-moz-appearance: none) {
   body {
@@ -2459,6 +2459,15 @@ html[dir=ltr] .lang-link {
   }
 }
 
+.archive_page-content {
+  padding: 55px 0 60px;
+}
+@media (max-width: 767px) {
+  .archive_page-content {
+    padding: 40px 0 50px;
+  }
+}
+
 .archive-row {
   display: grid;
   grid-template-columns: 387px 1fr;
@@ -2477,7 +2486,7 @@ html[dir=ltr] .lang-link {
   }
 }
 
-.acrchive-side {
+.archive-side {
   padding: 16px;
   box-shadow: 0px -12px 64px -12px rgba(100, 97, 193, 0.1411764706);
   background-color: #fcfcfe;
@@ -2487,37 +2496,37 @@ html[dir=ltr] .lang-link {
   inset-inline-start: 0;
 }
 @media (max-width: 1199px) {
-  .acrchive-side {
+  .archive-side {
     border-radius: 16px;
   }
 }
 @media (max-width: 991px) {
-  .acrchive-side {
+  .archive-side {
     width: 100%;
     position: relative;
     inset: unset;
   }
 }
 
-.acrchive-content {
+.archive-content {
   padding: 40px;
   box-shadow: 0px -12px 64px -12px rgba(100, 97, 193, 0.1411764706);
   background-color: #fcfcfe;
   border-radius: 24px;
 }
 @media (max-width: 1199px) {
-  .acrchive-content {
+  .archive-content {
     border-radius: 16px;
     padding: 16px;
   }
 }
 @media (max-width: 991px) {
-  .acrchive-content {
+  .archive-content {
     padding: 24px;
   }
 }
 @media (max-width: 767px) {
-  .acrchive-content {
+  .archive-content {
     padding: 16px;
   }
 }/*# sourceMappingURL=main.css.map */
