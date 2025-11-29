@@ -1,0 +1,24 @@
+.success-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 24px;
+  .icon {
+    width: 88px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 81px;
+    color: #12b76a;
+  }
+  .text {
+    font-size: 18px;
+    line-height: 1.334;
+    font-weight: 500;
+    color: #333333;
+    margin: 0;
+  }
+}

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/intlTelInput.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -61,12 +62,22 @@
               </ul>
               <div class="nav-foot">
                 <div class="header-btns">
-                  <a href="#!" class="header-btn default-btn">
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#joinModal"
+                    class="header-btn default-btn"
+                  >
                     الانضمام كشريك
-                  </a>
-                  <a href="#!" class="header-btn default-btn secondary-btn">
+                  </button>
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#addProductModal"
+                    class="header-btn default-btn secondary-btn"
+                  >
                     اضافة منتج
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -171,10 +182,22 @@
               </div>
             </div>
             <div class="header-btns">
-              <a href="#!" class="header-btn default-btn"> الانضمام كشريك </a>
-              <a href="#!" class="header-btn default-btn secondary-btn">
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#joinModal"
+                class="header-btn default-btn"
+              >
+                الانضمام كشريك
+              </button>
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#addProductModal"
+                class="header-btn default-btn secondary-btn"
+              >
                 اضافة منتج
-              </a>
+              </button>
             </div>
             <div class="lang-content">
               <a href="#!" class="lang-link">
@@ -306,10 +329,7 @@
           </div>
         </div>
         <div class="auctions-grid">
-          <div
-            class="auction-item featured"
-            data-categories="realestate"
-          >
+          <div class="auction-item featured" data-categories="realestate">
             <a href="realestate_single.html" class="item-img">
               <img
                 loading="lazy"
@@ -380,7 +400,9 @@
             <div class="item-info">
               <div class="item-head">
                 <h3 class="item-title">
-                  <a href="vehicles_single.html"> مزاد مركبات الرياض مزاد مركبات الرياض </a>
+                  <a href="vehicles_single.html">
+                    مزاد مركبات الرياض مزاد مركبات الرياض
+                  </a>
                 </h3>
                 <span class="item-product">14 منتج</span>
               </div>
@@ -411,10 +433,7 @@
               </div>
             </div>
           </div>
-          <div
-            class="auction-item"
-            data-categories="movables,realestate"
-          >
+          <div class="auction-item" data-categories="movables,realestate">
             <a href="realestate_single.html" class="item-img">
               <img
                 loading="lazy"
@@ -573,7 +592,9 @@
             <div class="item-info">
               <div class="item-head">
                 <h3 class="item-title">
-                  <a href="vehicles_single.html"> مزاد مركبات الرياض مزاد مركبات الرياض </a>
+                  <a href="vehicles_single.html">
+                    مزاد مركبات الرياض مزاد مركبات الرياض
+                  </a>
                 </h3>
                 <span class="item-product">14 منتج</span>
               </div>
@@ -666,7 +687,10 @@
               </div>
             </div>
           </div>
-          <div class="auction-item" data-categories="vehicles,movables,myauction">
+          <div
+            class="auction-item"
+            data-categories="vehicles,movables,myauction"
+          >
             <a href="vehicles_single.html" class="item-img">
               <img
                 loading="lazy"
@@ -766,12 +790,146 @@
     </footer>
     <!-- End Footer -->
 
-    
+    <!-- Start Join Modal -->
+    <div class="modal fade" id="joinModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">الانضمام كشريك</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="join-form">
+              <div class="fieldset-grid">
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">رفع المستندات المطلوبة</h3>
+                  <div class="form-grid">
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/upload.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل شهادة الضريبة">
+                          تحميل شهادة الضريبة
+                        </span>
+                      </div>
+                    </div>
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/upload.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل تفويض المؤسسة">
+                          تحميل تفويض المؤسسة
+                        </span>
+                      </div>
+                    </div>
+                    <div class="upload-box full-w">
+                      <input type="file" class="file-input" />
+                      <div class="upload-content">
+                        <i class="icon">
+                          <img
+                            src="images/icons/upload.svg"
+                            alt="upload"
+                            class="svg"
+                          />
+                        </i>
+                        <span data-plceholder="تحميل السجل التجاري">
+                          تحميل السجل التجاري
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset class="form-fieldset full-w">
+                  <h3 class="fieldset-label">معلومات الاتصال</h3>
+                  <div class="form-grid">
+                    <div class="form-group full-w">
+                      <input
+                        type="text"
+                        placeholder="الاسم كامل"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        placeholder="رقم الجوال"
+                        intlTelInput
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <input
+                        type="email"
+                        placeholder="البريد الالكتروني"
+                        class="form-control"
+                      />
+                    </div>
+                    <div class="form-group full-w">
+                      <textarea
+                        class="form-control"
+                        placeholder="معلومات اضافيه"
+                      ></textarea>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button
+                type="button"
+                data-bs-target="#successModal"
+                data-bs-toggle="modal"
+                class="submit-btn"
+              >
+                التالي
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Join Modal -->
+
+    <!-- Start Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">الانضمام كشريك</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="success-content">
+              <i class="icon">
+                <img src="images/icons/success.svg" alt="success" class="svg" />
+              </i>
+              <h3 class="text">تم الاستلام الطلب المرجعي للانضمام كشريك</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Success Modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/svg.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

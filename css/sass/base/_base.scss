@@ -9,16 +9,23 @@ body {
   font-weight: 400;
   color: $textColor;
   background-color: #fff;
-  &::-webkit-scrollbar {
-    background-color: #f1f1f1;
-    width: 4px;
-    border-radius: 3px;
+  @supports (-moz-appearance: none) {
+    scrollbar-width: thin;
+    scrollbar-color: $primaryColor #f1f1f1;
+  }
+  @supports selector(::-webkit-scrollbar) {
+    &::-webkit-scrollbar {
+      background-color: #f1f1f1;
+      width: 4px;
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $primaryColor;
+      border-radius: 3px;
+    }
   }
 
-  &::-webkit-scrollbar-thumb {
-    background-color: $primaryColor;
-    border-radius: 3px;
-  }
   @include ltr {
     font-family: EN;
     text-transform: capitalize;

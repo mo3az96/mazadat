@@ -97,31 +97,6 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/svg.js"></script>
     <script src="../js/intlTelInput.min.js"></script>
-
-    <script>
-      $(".password-toggle").on("click", function (e) {
-        e.preventDefault();
-        const input = $(this)
-          .closest(".password-content")
-          .find("input.form-control");
-        const isPassword = input.attr("type") === "password";
-        input.attr("type", isPassword ? "text" : "password");
-        $(this).toggleClass("active", isPassword);
-      });
-    </script>
-
-    <script>
-      let input = $("input[type=tel][intlTelInput]");
-      if (input.length > 0) {
-        for (let i = 0; i < input.length; i++) {
-          intlTelInput(input[i], {
-            utilsScript: "/js/utils.js",
-            separateDialCode: true,
-            initialCountry: "sa",
-            preferredCountries: ["sa", "kw", "ae", "bh", "om", "qa"],
-          });
-        }
-      }
-    </script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
