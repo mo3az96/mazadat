@@ -1,3 +1,6 @@
 .page-content {
   padding: 55px 0 60px;
+  @include xs {
+    padding: 40px 0 50px;
+  }
 }
