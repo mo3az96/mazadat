@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px 22px;
+  &.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
   &.list-view {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -16,6 +19,9 @@
   @include xs {
     grid-template-columns: 1fr;
     gap: 20px;
+    &.grid-2 {
+      grid-template-columns: 1fr;
+    }
   }
 }
 

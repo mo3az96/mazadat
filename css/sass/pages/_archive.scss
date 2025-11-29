@@ -1,0 +1,46 @@
+.archive-row {
+  display: grid;
+  grid-template-columns: 387px 1fr;
+  gap: 16px;
+  align-items: start;
+  position: relative;
+  @include md {
+    grid-template-columns: 2fr 5fr;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+}
+.acrchive-side {
+  padding: 16px;
+  box-shadow: 0px -12px 64px -12px #6461c124;
+  background-color: #fcfcfe;
+  border-radius: 24px;
+  position: sticky;
+  top: 25px;
+  inset-inline-start: 0;
+  @include md {
+    border-radius: 16px;
+  }
+  @include sm {
+    width: 100%;
+    position: relative;
+    inset: unset;
+  }
+}
+.acrchive-content {
+  padding: 40px;
+  box-shadow: 0px -12px 64px -12px #6461c124;
+  background-color: #fcfcfe;
+  border-radius: 24px;
+  @include md {
+    border-radius: 16px;
+    padding: 16px;
+  }
+  @include sm {
+    padding: 24px;
+  }
+  @include xs {
+    padding: 16px;
+  }
+}

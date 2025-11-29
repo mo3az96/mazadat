@@ -6,6 +6,11 @@
   margin-bottom: 32px;
   @include sm {
     flex-wrap: wrap;
+    text-align: center;
+    &:has(.map-icon-btn) {
+      flex-wrap: nowrap;
+      text-align: start;
+    }
   }
   @include xs {
     gap: 16px 14px;
@@ -20,9 +25,8 @@
   margin: 0;
   @include sm {
     width: 100%;
-    text-align: center;
   }
-  @include xs{
+  @include xs {
     font-size: 24px;
   }
 }
@@ -95,8 +99,14 @@
   align-items: center;
   justify-content: end;
   gap: 66px;
+  &:has(.map-icon-btn) {
+    gap: 34px;
+  }
   @include md {
     gap: 16px;
+    &:has(.map-icon-btn) {
+      gap: 16px;
+    }
   }
 }
 
@@ -158,4 +168,27 @@
 .auctions_section-btn {
   width: fit-content;
   margin: 32px auto 0;
+}
+
+.map-icon-btn {
+  width: 48px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 1px solid #f0eff9;
+  background-color: #fff;
+  overflow: hidden;
+  font-size: 26px;
+  flex-shrink: 0;
+  @include focus(#2a2951);
+  &:hover {
+    background-color: $primaryColor;
+    color: #fff;
+  }
+  @include md {
+    width: 46px;
+    font-size: 24px;
+  }
 }

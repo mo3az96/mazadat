@@ -41,26 +41,26 @@
   position: relative;
 }
 .float_search-input {
-  width: 350px;
-  height: 48px;
-  border-radius: 15px;
+  width: 335px;
+  height: 60px;
+  border-radius: 16px;
   border: 2px solid transparent;
   background-color: #fff;
-  border: 2px solid #f2f2f2;
+  border: 1px solid #b6b6b6;
   padding-inline: 20px 50px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 600;
   color: $textColor;
   transition: all 0.3s ease-in-out;
   &::placeholder {
-    font-size: 14px;
-    font-weight: 400;
-    color: #808080;
+    font-size: 16px;
+    font-weight: 500;
+    color: #818181;
   }
   &:focus {
     border-color: $primaryColor;
   }
-  @include xs{
+  @include xs {
     width: 100%;
   }
 }
@@ -68,16 +68,16 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  inset-inline-end: 15px;
+  inset-inline-end: 16px;
   padding: 0;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
   cursor: pointer;
-  @include focus(#333333);
+  @include focus(#b2b2b2);
   &:hover {
     color: $primaryColor;
   }
