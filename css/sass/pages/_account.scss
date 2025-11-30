@@ -1,0 +1,159 @@
+.account_page-content {
+  padding: 60px 0 96px;
+  .container {
+    @include xl {
+      max-width: 1336px;
+    }
+  }
+  @include xs {
+    padding: 40px 0 50px;
+  }
+}
+.account-row {
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 24px;
+  align-items: start;
+  position: relative;
+  @include md {
+    grid-template-columns: 2fr 5fr;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+}
+.account-side {
+  padding: 20px 24px;
+  border: 1px solid #0000001a;
+  border-radius: 16px;
+  position: sticky;
+  top: 25px;
+  inset-inline-start: 0;
+  @include sm {
+    width: 100%;
+    position: relative;
+    inset: unset;
+  }
+  .account-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .account_nav-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    a {
+      padding: 0 16px;
+      border-radius: 12px;
+      height: 48px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 8px;
+      font-size: 16px;
+      @include focus(#818181);
+      .icon {
+        width: 24px;
+        aspect-ratio: 1;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+      }
+      &:hover {
+        color: $primaryColor;
+      }
+      &.active {
+        background-color: $primaryColor;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.account-content {
+  padding: 20px 24px;
+  border: 1px solid #0000001a;
+  border-radius: 16px;
+  .form-grid {
+    margin-bottom: 24px;
+  }
+  .submit-btn {
+    height: 60px;
+  }
+}
+
+.account-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+  .account-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .account_title {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+  }
+  .account_subtitle {
+    font-size: 14px;
+    line-height: 1.334;
+    color: #667085;
+    margin: 0;
+  }
+}
+
+.change_password-link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  @include focus($primaryColor);
+  .icon {
+    width: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+  &:hover {
+    color: $secondaryColor;
+    text-decoration: underline;
+  }
+}
+
+.delete-account {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 25px 0 0;
+  @include focus(#e03939);
+  .icon {
+    width: 18px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  &:hover {
+    color: darken(#e03939, 10%);
+  }
+}
