@@ -1327,6 +1327,10 @@ html[dir=ltr] .filter_select-content .filter-select {
 .auctions-grid.grid-2 {
   grid-template-columns: repeat(2, 1fr);
 }
+.auctions-grid.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
 .auctions-grid.list-view {
   grid-template-columns: 1fr;
   gap: 20px;
@@ -1334,6 +1338,10 @@ html[dir=ltr] .filter_select-content .filter-select {
 @media (max-width: 1199px) {
   .auctions-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .auctions-grid.grid-3 {
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 }
@@ -1348,6 +1356,9 @@ html[dir=ltr] .filter_select-content .filter-select {
     gap: 20px;
   }
   .auctions-grid.grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .auctions-grid.grid-3 {
     grid-template-columns: 1fr;
   }
 }
@@ -3146,6 +3157,12 @@ html[dir=ltr] .lang-link {
   gap: 16px;
   margin-bottom: 32px;
 }
+@media (max-width: 767px) {
+  .account-head {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+}
 .account-head .account-titles {
   display: flex;
   flex-direction: column;
@@ -3163,6 +3180,33 @@ html[dir=ltr] .lang-link {
   line-height: 1.334;
   color: #667085;
   margin: 0;
+}
+.account-head .account_head-btn {
+  display: flex;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  color: #104C7F;
+  transition: all 0.3s ease-in-out;
+}
+.account-head .account_head-btn:focus {
+  color: #104C7F;
+}
+.account-head .account_head-btn .icon {
+  width: 22px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.account-head .account_head-btn:hover {
+  color: #0E4472;
+  text-decoration: underline;
 }
 
 .change_password-link {
@@ -3219,4 +3263,96 @@ html[dir=ltr] .lang-link {
 }
 .delete-account:hover {
   color: rgb(198.864628821, 31.135371179, 31.135371179);
+}
+
+.addresses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+@media (max-width: 767px) {
+  .addresses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.address-item {
+  width: 100%;
+}
+.address-item .address-content {
+  display: flex;
+  align-items: start;
+  padding: 16px;
+  height: 100%;
+  border: 1px solid #104c7f;
+  border-radius: 21px;
+  gap: 9px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.address-item .icon {
+  flex-shrink: 0;
+  width: 43px;
+  aspect-ratio: 43/42;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e7edf2;
+  background-color: #fff;
+  font-size: 20px;
+  color: #104C7F;
+  border-radius: 12px;
+}
+.address-item .title {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+}
+.address-item .title span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #828282;
+  line-height: 1.334;
+}
+.address-item .mark {
+  width: 14.5px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  border: 1.5px solid #d1d1db;
+  background-color: #efefef;
+  border-radius: 50%;
+  margin-inline-start: auto;
+  box-shadow: 0px 1px 2px 0px rgba(18, 18, 23, 0.0509803922);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.address-item .mark:after {
+  content: "";
+  width: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #104C7F;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.address-item input {
+  display: none;
+}
+.address-item input:checked ~ .address-content {
+  background-color: #e7edf2;
+}
+.address-item input:checked ~ .address-content .mark {
+  border-color: #104C7F;
+  background-color: #fff;
+}
+.address-item input:checked ~ .address-content .mark:after {
+  transform: scale(1);
+  opacity: 1;
 }/*# sourceMappingURL=main.css.map */
