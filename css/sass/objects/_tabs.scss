@@ -1,0 +1,72 @@
+.auctions-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 34px;
+  width: fit-content;
+  min-width: 613px;
+  max-width: 100%;
+  border-bottom: 2px solid #f5f5f5;
+  margin-bottom: 32px;
+  @include sm {
+    gap: 20px;
+  }
+  @include xs {
+    overflow-y: hidden;
+    overflow-x: auto;
+    min-width: auto;
+    width: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    @supports (-moz-appearance: none) {
+      scrollbar-width: thin;
+      scrollbar-color: $primaryColor #f1f1f1;
+    }
+    @supports selector(::-webkit-scrollbar) {
+      &::-webkit-scrollbar {
+        background-color: #f1f1f1;
+        height: 2px;
+        border-radius: 3px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $primaryColor;
+        border-radius: 3px;
+      }
+    }
+  }
+  .nav-item {
+    margin: 0;
+    padding: 0 0 14px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      inset-inline-start: 0;
+      width: 100%;
+      transform: scaleX(0);
+      height: 3px;
+      background-color: $primaryColor;
+      transition: all 0.3s ease-in-out;
+      @include xs {
+        display: none;
+      }
+    }
+    &:has(.active) {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+  .nav-link {
+    padding: 0;
+    font-size: 14px;
+    color: #818181;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    &.active {
+      color: #292929;
+    }
+  }
+}
