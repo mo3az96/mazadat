@@ -570,12 +570,22 @@
                         </span>
                       </div>
                       <div class="item-btns">
-                        <a href="#!" class="item-btn default-btn">
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#completeProceduresModal"
+                          class="item-btn default-btn"
+                        >
                           استكمال الاجراءات
-                        </a>
-                        <a href="#!" class="item-btn default-btn secondary-btn">
+                        </button>
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#contactOwnerModal"
+                          class="item-btn default-btn secondary-btn"
+                        >
                           تواصل مع المالك
-                        </a>
+                        </button>
                       </div>
                       <button type="button" class="item-fav">
                         <img
@@ -622,12 +632,22 @@
                         </span>
                       </div>
                       <div class="item-btns">
-                        <a href="#!" class="item-btn default-btn">
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#completeProceduresModal"
+                          class="item-btn default-btn"
+                        >
                           استكمال الاجراءات
-                        </a>
-                        <a href="#!" class="item-btn default-btn secondary-btn">
+                        </button>
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#contactOwnerModal"
+                          class="item-btn default-btn secondary-btn"
+                        >
                           تواصل مع المالك
-                        </a>
+                        </button>
                       </div>
                       <button type="button" class="item-fav">
                         <img
@@ -674,12 +694,22 @@
                         </span>
                       </div>
                       <div class="item-btns">
-                        <a href="#!" class="item-btn default-btn">
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#completeProceduresModal"
+                          class="item-btn default-btn"
+                        >
                           استكمال الاجراءات
-                        </a>
-                        <a href="#!" class="item-btn default-btn secondary-btn">
+                        </button>
+                        <button
+                          type="button"
+                          data-bs-toggle="modal"
+                          data-bs-target="#contactOwnerModal"
+                          class="item-btn default-btn secondary-btn"
+                        >
                           تواصل مع المالك
-                        </a>
+                        </button>
                       </div>
                       <button type="button" class="item-fav">
                         <img
@@ -2078,6 +2108,130 @@
     </div>
     <!-- End Add Movables Product Modal -->
 
+    <!-- Start Complete Procedures Modal -->
+    <div
+      class="modal fade"
+      id="completeProceduresModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">استكمال الاجراءت</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img
+                src="../images/icons/modal_close.svg"
+                alt="close"
+                class="svg"
+              />
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="join-form">
+              <div class="form-grid">
+                <div class="upload-box full-w">
+                  <input type="file" class="file-input" />
+                  <div class="upload-content">
+                    <i class="icon">
+                      <img
+                        src="../images/icons/upload.svg"
+                        alt="upload"
+                        class="svg"
+                      />
+                    </i>
+                    <span data-plceholder="ايصال الدفع"> ايصال الدفع </span>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="submit-btn">التالي</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Complete Procedures Modal -->
+
+    <!-- Start Contact Owner Modal -->
+    <div
+      class="modal fade"
+      id="contactOwnerModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">التواصل مع المالك</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img
+                src="../images/icons/modal_close.svg"
+                alt="close"
+                class="svg"
+              />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="msgs-container">
+              <div class="msg-item sender">
+                <p class="msg-content">
+                  Hi, my name is Mohammed Eid, and I have a new offer 
+                </p>
+                <span class="msg-info">
+                  مشعل فارس عبدالعزيز السويلم 03/22/2025 22:32:40
+                </span>
+              </div>
+              <div class="msg-item receiver">
+                <p class="msg-content">Hello Mohammed, I am interested</p>
+                <span class="msg-info">
+                  مشعل فارس عبدالعزيز السويلم 03/22/2025 22:32:40
+                </span>
+              </div>
+            </div>
+            <div class="form-grid">
+              <div class="upload-box">
+                <input type="file" class="file-input" />
+                <div class="upload-content">
+                  <i class="icon">
+                    <img
+                      src="../images/icons/upload.svg"
+                      alt="upload"
+                      class="svg"
+                    />
+                  </i>
+                  <span data-plceholder="ايصال الدفع"> ايصال الدفع </span>
+                </div>
+              </div>
+              <div class="upload-box">
+                <input type="file" class="file-input" />
+                <div class="upload-content">
+                  <i class="icon">
+                    <img
+                      src="../images/icons/upload.svg"
+                      alt="upload"
+                      class="svg"
+                    />
+                  </i>
+                  <span data-plceholder="ارفاق الاستماره">
+                    ارفاق الاستماره
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="chat-input-bar">
+              <button class="attach-button">
+                <img src="../images/icons/attach.svg" alt="icon" class="svg" />
+              </button>
+              <input type="text" class="input-field" placeholder="اكتب هنا" />
+              <button class="send-icon">
+                <img src="../images/icons/send.svg" alt="icon" class="svg" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Contact Owner Modal -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
