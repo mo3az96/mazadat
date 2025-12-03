@@ -10,7 +10,7 @@
       name="description"
       content="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
     />
-    <title>Mazadat | Addresses</title>
+    <title>Mazadat | Bank Accounts</title>
     <link rel="shortcut icon" type="img/png" href="../images/favicon.png" />
     <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="../css/fontawesome.min.css" />
@@ -246,7 +246,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="./addresses.html" class="active">
+                  <a href="./addresses.html">
                     <i class="icon">
                       <img
                         src="../images/icons/account/2.svg"
@@ -294,7 +294,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="./banks_accounts_empty.html">
+                  <a href="./banks_accounts_empty.html" class="active">
                     <i class="icon">
                       <img
                         src="../images/icons/account/1.svg"
@@ -323,56 +323,37 @@
           <div class="account-content">
             <div class="account-head">
               <div class="account-titles">
-                <h2 class="account_title">العنوان</h2>
-                <p class="account_subtitle">
-                  هذه هي عناوينك المسجله مع اضافو العنوان
-                </p>
+                <h2 class="account_title">حساب بنكي</h2>
+                <p class="account_subtitle">هذه هي كل حساباتك البنكيه</p>
               </div>
-              <a href="#!" class="account_head-btn">
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#addAccountModal"
+                class="account_head-btn"
+              >
                 <i class="icon">
                   <img src="../images/icons/plus.svg" alt="icon" class="svg" />
                 </i>
-                اضافة عنوان
-              </a>
+                اضافة حساب بنكي
+              </button>
             </div>
-            <form>
-              <div class="addresses-grid">
-                <label class="address-item">
-                  <input type="radio" name="address" />
-                  <div class="address-content">
-                    <span class="icon">
-                      <img
-                        src="../images/icons/dots.svg"
-                        alt="icon"
-                        class="svg"
-                      />
-                    </span>
-                    <h3 class="title">
-                      العمل
-                      <span>ا1321 الدمام, الرياض</span>
-                    </h3>
-                    <span class="mark"></span>
-                  </div>
-                </label>
-                <label class="address-item">
-                  <input type="radio" name="address" checked />
-                  <div class="address-content">
-                    <span class="icon">
-                      <img
-                        src="../images/icons/dots.svg"
-                        alt="icon"
-                        class="svg"
-                      />
-                    </span>
-                    <h3 class="title">
-                      العمل
-                      <span>ا1321 الدمام, الرياض</span>
-                    </h3>
-                    <span class="mark"></span>
-                  </div>
-                </label>
+            <div class="bank_accounts-grid">
+              <div class="bank_account-item">
+                <h3 class="title">
+                  Noor elbadwy
+                  <span>**********222</span>
+                </h3>
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#deleteAccountModal"
+                  class="delete_account-btn"
+                >
+                  <img src="../images/icons/trash.svg" alt="icon" class="svg" />
+                </button>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -1440,6 +1421,120 @@
     </div>
     <!-- End Add Movables Product Modal -->
 
+    <!-- Start Add Account Modal -->
+    <div
+      class="modal fade"
+      id="addAccountModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">اضافة حساب بنكي</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img
+                src="../images/icons/modal_close.svg"
+                alt="close"
+                class="svg"
+              />
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-grid">
+                <div class="form-group full-w">
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="رقم الحساب"
+                  />
+                </div>
+                <div class="form-group full-w">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="اسم البنك"
+                  />
+                </div>
+                <div class="form-group full-w">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="اسم صاحب الحساب"
+                  />
+                </div>
+                <div class="form-group full-w">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="رقم الايبان"
+                  />
+                </div>
+                <div class="upload-box full-w">
+                  <input type="file" class="file-input" />
+                  <div class="upload-content">
+                    <i class="icon">
+                      <img
+                        src="../images/icons/upload.svg"
+                        alt="upload"
+                        class="svg"
+                      />
+                    </i>
+                    <span data-plceholder="صورة او شهادة توضح الايبان">
+                      صورة او شهادة توضح الايبان
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="submit-btn">التالي</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Add Account Modal -->
+
+    <!-- Start Delete Account Modal -->
+    <div
+      class="modal fade"
+      id="deleteAccountModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img
+                src="../images/icons/modal_close.svg"
+                alt="close"
+                class="svg"
+              />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="delete-content">
+              <h2 class="title">هل تريد حذف البطاقه؟</h2>
+              <p class="desc">ستقوم بحذف البطاقه باسم نور البدوي ؟</p>
+              <div class="btns-content">
+                <a href="./banks_accounts_empty.html" class="default-btn">
+                  حذف
+                </a>
+                <button
+                  type="button"
+                  class="default-btn secondary-btn"
+                  data-bs-dismiss="modal"
+                >
+                  الغاء
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Delete Account Modal -->
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>

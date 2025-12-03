@@ -80,6 +80,7 @@
   border-radius: 16px;
   max-width: 100%;
   overflow: hidden;
+  height: 100%;
   .form-grid {
     margin-bottom: 24px;
   }
@@ -387,5 +388,96 @@
         background-color: #efefef;
       }
     }
+  }
+}
+
+.bank_accounts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  @include xs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bank_account-item {
+  display: flex;
+  align-items: start;
+  padding: 8px 16px 16px;
+  height: 100%;
+  border: 1px solid #104c7f;
+  border-radius: 21px;
+  gap: 9px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  .title {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 5px;
+    margin: 0;
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      color: #828282;
+      line-height: 1.334;
+      direction: ltr;
+      @include rtl {
+        text-align: right;
+      }
+      @include ltr {
+        text-align: left;
+      }
+    }
+  }
+  .delete_account-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 24px;
+    aspect-ratio: 1;
+    font-size: 22px;
+    color: #292d32;
+    cursor: pointer;
+    padding: 0;
+    margin-inline-start: auto;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: #e03939;
+    }
+  }
+}
+
+.bank_accounts-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 16px;
+  .icon {
+    width: 160px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 145px;
+    color: $primaryColor;
+  }
+  .text {
+    color: #363333;
+    font-size: 18px;
+    margin: 0;
+  }
+  .default-btn {
+    width: 100%;
+    height: 50px;
+    max-width: 327px;
+    font-size: 16px;
   }
 }
