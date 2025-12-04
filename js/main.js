@@ -71,6 +71,29 @@ $(document).ready(function () {
       $(".auctions-grid").addClass("list-view");
     }
   });
+  /************************************ Accordion ************************************/
+  $(".log-title").on("click", function () {
+    $(this).toggleClass("closed").next().slideToggle();
+  });
+  /************************************ Product Page ************************************/
+  var productThumbsSlider = new Swiper(".product_thumbs-slider .swiper", {
+    breakpoints: {
+      0: {
+        spaceBetween: 5,
+        slidesPerView: 4,
+      },
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 8,
+      },
+    },
+  });
+  var productImagesSlider = new Swiper(".product_images-slider .swiper", {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: productThumbsSlider,
+    },
+  });
 });
 
 /************************************ Forms ************************************/

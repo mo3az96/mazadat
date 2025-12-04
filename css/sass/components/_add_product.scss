@@ -33,6 +33,13 @@
     border: 1px solid #f0eff9;
     border-radius: 14px;
     cursor: pointer;
+    &:not(:has(.icon)) {
+      align-items: center;
+      min-height: 56px;
+      .mark {
+        margin: 0;
+      }
+    }
   }
   .icon {
     width: 52px;
