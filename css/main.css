@@ -1020,6 +1020,41 @@ html[dir=ltr] .float-input .form-control {
   color: #fff;
 }
 
+.confirm-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+.confirm-content .title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #101828;
+  margin: 0;
+}
+.confirm-content .desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #667085;
+  margin: 0;
+}
+.confirm-content .btns-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+  padding-top: 18px;
+}
+.confirm-content .default-btn {
+  height: 50px;
+  font-size: 16px;
+  width: 100%;
+}
+
 .success-content {
   display: flex;
   align-items: center;
@@ -3464,6 +3499,13 @@ html[dir=ltr] .lang-link {
   background-color: #fff;
   border-radius: 24px;
 }
+.product-block .title {
+  font-size: 18px;
+  line-height: 1.334;
+  color: #292929;
+  font-weight: 600;
+  margin: 0 0 16px;
+}
 
 .product-info {
   display: flex;
@@ -3567,7 +3609,7 @@ html[dir=ltr] .lang-link {
   line-height: 1.443;
   margin: 0;
 }
-.tab-pane .product_single-desc {
+.product-tabs .product_single-desc {
   border-top: 1px solid #f2f2f2;
   margin-top: 10px;
   padding: 10px 0 0;
@@ -3930,6 +3972,21 @@ html[dir=ltr] .lang-link {
 .modal-totals p:last-of-type strong {
   color: #104C7F;
   font-weight: 700;
+}
+
+.product-actions {
+  border-top: 1px solid #f2f2f2;
+  margin-top: 10px;
+  padding: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-actions .confirm-btn {
+  width: 100%;
+  max-width: 252px;
+  height: 50px;
+  font-size: 16px;
 }
 
 .account_page-content {

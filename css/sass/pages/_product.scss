@@ -193,6 +193,13 @@
   padding: 16px 24px;
   background-color: #fff;
   border-radius: 24px;
+  .title {
+    font-size: 18px;
+    line-height: 1.334;
+    color: #292929;
+    font-weight: 600;
+    margin: 0 0 16px;
+  }
 }
 .product-info {
   display: flex;
@@ -288,7 +295,7 @@
     line-height: 1.443;
     margin: 0;
   }
-  .tab-pane & {
+  .product-tabs & {
     border-top: 1px solid #f2f2f2;
     margin-top: 10px;
     padding: 10px 0 0;
@@ -651,5 +658,20 @@
         font-weight: 700;
       }
     }
+  }
+}
+
+.product-actions {
+  border-top: 1px solid #f2f2f2;
+  margin-top: 10px;
+  padding: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .confirm-btn {
+    width: 100%;
+    max-width: 252px;
+    height: 50px;
+    font-size: 16px;
   }
 }
