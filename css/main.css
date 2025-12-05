@@ -4975,4 +4975,50 @@ html[dir=ltr] .bank_account-item .title span {
 }
 .wallet-summary .wallet-action:hover .text {
   color: #104C7F;
+}
+
+.wallet_information-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wallet_information-lists .wallet_information-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.wallet_information-lists .wallet_information-list .item {
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #104C7F;
+  background-color: #fff;
+}
+.wallet_information-lists .wallet_information-list .item span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.wallet_information-lists .wallet_information-list .item:nth-of-type(odd) {
+  background-color: #efefef;
+}
+.wallet_information-lists .wallet_information-list:last-of-type .item {
+  background-color: #efefef;
+}
+.wallet_information-lists .wallet_information-list:last-of-type .item:nth-of-type(odd) {
+  background-color: #fff;
+}
+.wallet_information-lists .wallet_information-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #363333;
+  line-height: 24px;
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */

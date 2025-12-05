@@ -1952,7 +1952,9 @@
         </div>
       </div>
     </div>
+    <!-- End Table Bond Modal -->
 
+    <!-- Start Close Bond Modal -->
     <div
       class="modal fade"
       id="closeBondModal"
@@ -1985,7 +1987,9 @@
                 <button
                   type="button"
                   class="default-btn secondary-btn"
-                  data-bs-dismiss="modal"
+                  data-bs-toggle="modal"
+                  data-bs-target="#tableBondModal"
+                  class="default-btn secondary-btn"
                 >
                   الغاء
                 </button>
@@ -1995,7 +1999,88 @@
         </div>
       </div>
     </div>
-    <!-- End Table Bond Modal -->
+    <!-- Start Close Bond Modal -->
+
+    <!-- Start wallet Information Modal -->
+    <div
+      class="modal fade"
+      id="walletInfoModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">معلومات رسوم تغذيه المحفظه</h2>
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <img src="images/icons/modal_close.svg" alt="close" class="svg" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="wallet_information-lists">
+              <div class="wallet_information-list">
+                <div class="item">
+                  <span>رسوم شحن المحفظة</span>
+                  <span>
+                    94
+                    <i class="currency">
+                      <img src="images/icons/sar.svg" alt="sar" class="svg" />
+                    </i>
+                  </span>
+                </div>
+                <div class="item">
+                  <span>نسبة الخصم على باقتك الحالية</span>
+                  <span style="color: #e03939"> لا يوجد خصم </span>
+                </div>
+                <div class="item">
+                  <span>إجمالي المبلغ المدفوع</span>
+                  <span>
+                    94
+                    <i class="currency">
+                      <img src="images/icons/sar.svg" alt="sar" class="svg" />
+                    </i>
+                  </span>
+                </div>
+                <div class="item">
+                  <span>السداد</span>
+                  <span style="color: #2d883e"> تم الدفع </span>
+                </div>
+              </div>
+              <h3 class="wallet_information-title">معلومات سند لأمر</h3>
+              <div class="wallet_information-list">
+                <div class="item">
+                  <span>رقم السند</span>
+                  <span> 1013042518092731 </span>
+                </div>
+                <div class="item">
+                  <span>تاريخ الانشاء</span>
+                  <span> 2025 / 04 / 13 - 01:59 م </span>
+                </div>
+                <div class="item">
+                  <span>الرصيد</span>
+                  <span>
+                    10,000
+                    <i class="currency">
+                      <img src="images/icons/sar.svg" alt="sar" class="svg" />
+                    </i>
+                  </span>
+                </div>
+                <div class="item">
+                  <span>الحالة</span>
+                  <span> تم الموافقة </span>
+                </div>
+                <div class="item">
+                  <span>تاريخ التعديل</span>
+                  <span> 2025 / 04 / 13 - 01:59 م </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End wallet Information Modal -->
+
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

@@ -353,3 +353,51 @@
     }
   }
 }
+
+.wallet_information-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .wallet_information-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .item {
+      width: 100%;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      border-radius: 8px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      color: $primaryColor;
+      background-color: #fff;
+      span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      &:nth-of-type(odd) {
+        background-color: #efefef;
+      }
+    }
+    &:last-of-type {
+      .item {
+        background-color: #efefef;
+        &:nth-of-type(odd) {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  .wallet_information-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #363333;
+    line-height: 24px;
+    margin: 0;
+  }
+}
