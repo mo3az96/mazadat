@@ -10,6 +10,12 @@
       margin-inline: auto;
       width: var(--bs-modal-width);
     }
+    &.modal-lg {
+      --bs-modal-width: 1132px;
+      margin-inline: auto;
+      width: 100%;
+      max-width: var(--bs-modal-width);
+    }
   }
   .modal-content {
     border-radius: 24px;

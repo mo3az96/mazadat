@@ -664,6 +664,19 @@ html[dir=ltr] .float-input .form-control {
   transition: all 0.2s ease;
 }
 
+.price-input {
+  position: relative;
+  width: 100%;
+}
+.price-input .icon {
+  position: absolute;
+  inset-inline-end: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b2b2b2;
+  font-size: 14px;
+}
+
 .submit-btn {
   display: flex;
   align-items: center;
@@ -882,6 +895,12 @@ html[dir=ltr] .float-input .form-control {
     margin-inline: auto;
     width: var(--bs-modal-width);
   }
+}
+.modal .modal-dialog.modal-lg {
+  --bs-modal-width: 1132px;
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--bs-modal-width);
 }
 .modal .modal-content {
   border-radius: 24px;
@@ -1157,6 +1176,7 @@ html[dir=ltr] .float-input .form-control {
 }
 .auctions-tabs .nav-link.active {
   color: #292929;
+  font-weight: 500;
 }
 
 .product_tabs-nav {
@@ -1193,6 +1213,82 @@ html[dir=ltr] .float-input .form-control {
 .product_tabs-nav .nav-link.active {
   background-color: #104C7F;
   color: #fff;
+}
+
+.table-responsive {
+  border: none;
+}
+
+.bonds-table {
+  table-layout: fixed;
+  width: 100%;
+  min-width: 990px;
+}
+.bonds-table th {
+  border-bottom: 1px solid #104C7F;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #104C7F;
+  font-weight: 400;
+  padding: 16px;
+  padding-inline-end: 5px;
+}
+.bonds-table td {
+  padding: 9px 16px;
+  padding-inline-end: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #585858;
+}
+.bonds-table .status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 4px;
+  padding: 0 8px;
+  height: 24px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+.bonds-table .status.success {
+  background-color: #d9ffd6;
+  color: #2d883e;
+}
+.bonds-table .status.pending {
+  background-color: #fff2d6;
+  color: #e58c0e;
+}
+.bonds-table .default-btn {
+  height: 36px;
+}
+.bonds-table .table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+}
+.bonds-table .table-action {
+  width: 22px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #828282;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+.bonds-table .table-action.download-btn {
+  color: #2d883e;
+}
+.bonds-table .table-action.info-btn {
+  color: #616161;
+}
+.bonds-table .table-action:hover {
+  color: #104C7F;
 }
 
 @media (max-width: 767px) {
@@ -4503,4 +4599,380 @@ html[dir=ltr] .bank_account-item .title span {
   height: 50px;
   max-width: 327px;
   font-size: 16px;
+}
+
+.wallet_page-content {
+  padding: 60px 0 96px;
+}
+@media (min-width: 1400px) {
+  .wallet_page-content .container {
+    max-width: 1302px;
+  }
+}
+@media (max-width: 767px) {
+  .wallet_page-content {
+    padding: 40px 0 50px;
+  }
+}
+
+.wallet-row {
+  display: grid;
+  grid-template-columns: 10fr 8fr;
+  gap: 40px;
+}
+@media (max-width: 991px) {
+  .wallet-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.wallet-tabs {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.wallet_tabs-title {
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 16px;
+}
+@media (max-width: 767px) {
+  .wallet_tabs-title {
+    font-size: 24px;
+  }
+}
+
+.wallet_tabs-content {
+  background-color: #fff;
+  border-radius: 21px;
+  padding: 8px 32px 64px;
+}
+@media (max-width: 1199px) {
+  .wallet_tabs-content {
+    padding: 24px;
+  }
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.transactions-list .transaction-item {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #efefef;
+}
+@media (max-width: 767px) {
+  .transactions-list .transaction-item {
+    flex-wrap: wrap;
+  }
+}
+.transactions-list .transaction-item .icon {
+  width: 44px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #efefef;
+  color: #828282;
+}
+.transactions-list .transaction-item .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  line-height: 1.334;
+}
+.transactions-list .transaction-item .title {
+  font-size: 12px;
+  color: #828282;
+}
+.transactions-list .transaction-item .value {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #363333;
+}
+.transactions-list .transaction-item .info {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 8px;
+  margin-inline-start: auto;
+}
+@media (max-width: 767px) {
+  .transactions-list .transaction-item .info {
+    margin-inline-start: 0;
+    width: 100%;
+    align-items: start;
+    padding-inline-start: 54px;
+  }
+}
+.transactions-list .transaction-item .status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 4px;
+  padding: 0 8px;
+  height: 24px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+.transactions-list .transaction-item .status::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.transactions-list .transaction-item .status.success {
+  background-color: #d9ffd6;
+  color: #2d883e;
+}
+.transactions-list .transaction-item .status.pending {
+  background-color: #fff2d6;
+  color: #e58c0e;
+}
+.transactions-list .transaction-item .time {
+  font-size: 12px;
+  line-height: 16px;
+  color: #828282;
+  display: flex;
+}
+.transactions-list .transaction-item.deposit .icon {
+  background-color: rgba(85, 199, 131, 0.1019607843);
+  color: #55c783;
+}
+
+.bonds-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.bonds-list .bond-item {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  padding: 0 0 10px;
+  border-bottom: 1px solid #efefef;
+}
+@media (max-width: 767px) {
+  .bonds-list .bond-item {
+    flex-wrap: wrap;
+  }
+}
+.bonds-list .bond-item .icon {
+  width: 44px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #efefef;
+  color: #828282;
+}
+.bonds-list .bond-item .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  line-height: 1.334;
+}
+.bonds-list .bond-item .text .title {
+  font-size: 12px;
+  color: #828282;
+}
+.bonds-list .bond-item .text .value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #363333;
+}
+.bonds-list .bond-item .price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  line-height: 1.334;
+}
+.bonds-list .bond-item .price .title {
+  font-size: 12px;
+  color: #828282;
+}
+.bonds-list .bond-item .price .value {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #828282;
+}
+.bonds-list .bond-item .default-btn {
+  margin-inline-start: auto;
+}
+@media (max-width: 767px) {
+  .bonds-list .bond-item .default-btn {
+    margin-inline-start: 54px;
+  }
+}
+
+.wallet-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 100%;
+  overflow: hidden;
+}
+.wallet-summary .wallet-block {
+  border: 1px solid #104C7F;
+  border-radius: 21px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.wallet-summary .wallet_main-card {
+  padding: 36px 25px;
+  background-color: #e7edf2;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1199px) {
+  .wallet-summary .wallet_main-card {
+    padding: 24px;
+  }
+}
+.wallet-summary .wallet_main-card .icon {
+  color: #104C7F;
+  opacity: 0.4;
+  width: 78px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 68px;
+}
+.wallet-summary .wallet_main-card .label {
+  font-size: 24px;
+  font-weight: 400;
+  color: #363333;
+  line-height: 1.5;
+}
+.wallet-summary .wallet_main-card .value {
+  font-size: 80px;
+  font-weight: 700;
+  color: #104C7F;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.wallet-summary .wallet_main-card .value i {
+  font-size: 40px;
+}
+@media (max-width: 1199px) {
+  .wallet-summary .wallet_main-card .value {
+    font-size: 50px;
+  }
+  .wallet-summary .wallet_main-card .value i {
+    font-size: 30px;
+  }
+}
+.wallet-summary .wallet-cards {
+  padding: 8px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+@media (max-width: 1199px) {
+  .wallet-summary .wallet-cards {
+    padding: 16px;
+  }
+}
+.wallet-summary .wallet-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 16px;
+  background-color: #e7edf2;
+  min-height: 101px;
+}
+.wallet-summary .wallet-card .label {
+  font-size: 12px;
+  color: #363333;
+  line-height: 1.334;
+  font-weight: 400;
+}
+.wallet-summary .wallet-card .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #363333;
+  line-height: 1.334;
+}
+.wallet-summary .wallet-card.blocked {
+  background-color: #f2f2f2;
+}
+.wallet-summary .wallet-card.blocked .label {
+  color: #828282;
+}
+.wallet-summary .wallet-card.blocked .value {
+  color: #828282;
+}
+.wallet-summary .wallet-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 16px 24px;
+}
+.wallet-summary .wallet_action-item {
+  display: flex;
+  justify-content: center;
+}
+.wallet-summary .wallet-action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+.wallet-summary .wallet-action .icon {
+  width: 52px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #104C7F;
+  background-color: #e7edf2;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.wallet-summary .wallet-action .text {
+  font-size: 14px;
+  color: #363333;
+  line-height: 1.334;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+.wallet-summary .wallet-action:hover .icon {
+  background-color: #104C7F;
+  color: #fff;
+}
+.wallet-summary .wallet-action:hover .text {
+  color: #104C7F;
 }/*# sourceMappingURL=main.css.map */

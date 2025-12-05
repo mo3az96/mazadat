@@ -1,0 +1,74 @@
+.table-responsive {
+  border: none;
+}
+
+.bonds-table {
+  table-layout: fixed;
+  width: 100%;
+  min-width: 990px;
+  th {
+    border-bottom: 1px solid $primaryColor;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $primaryColor;
+    font-weight: 400;
+    padding: 16px;
+    padding-inline-end: 5px;
+  }
+  td {
+    padding: 9px 16px;
+    padding-inline-end: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #585858;
+  }
+  .status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 4px;
+    padding: 0 8px;
+    height: 24px;
+    border-radius: 12px;
+    font-size: 12px;
+    &.success {
+      background-color: #d9ffd6;
+      color: #2d883e;
+    }
+    &.pending {
+      background-color: #fff2d6;
+      color: #e58c0e;
+    }
+  }
+  .default-btn {
+    height: 36px;
+  }
+  .table-actions {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 8px;
+  }
+  .table-action {
+    width: 22px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #828282;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+    &.download-btn {
+      color: #2d883e;
+    }
+    &.info-btn {
+      color: #616161;
+    }
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+}

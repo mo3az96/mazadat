@@ -372,3 +372,16 @@ form {
     transition: all 0.2s ease;
   }
 }
+
+.price-input {
+  position: relative;
+  width: 100%;
+  .icon {
+    position: absolute;
+    inset-inline-end: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b2b2b2;
+    font-size: 14px;
+  }
+}
